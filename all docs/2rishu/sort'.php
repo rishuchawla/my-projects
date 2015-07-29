@@ -1,0 +1,24 @@
+<html>
+<body>
+<?php
+$a=array('12','32','43','21');
+$count=count($a);
+$total=0;
+$i=0;
+for($i=0;$i<$count;$i++)
+{
+	for($j=$i+1;$j<$count;$j++)
+	{
+	if($a[$i]>$a[$j])
+	{
+		$total=$a[$i];
+		$a[$i]=$a[$j];
+		$a[$j]=$total;
+	}
+    }
+}
+print_r($a);
+
+?>
+</body>
+</html>
